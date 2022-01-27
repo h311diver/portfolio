@@ -807,7 +807,12 @@ body {
 }
 
 #rolling {
-    outline-color: activeborder;
+ 	margin-bottom: -10px;
+ 	padding: 5px;
+    margin-right: 40px;
+    color: black;
+    outline-color:  white;
+    outline-style: outset;
     background-color: inherit;
     
 }
@@ -825,8 +830,8 @@ body {
 
 #roll {
     overflow: hidden;
-    width: 120px;
-    height: 38px;
+    width: 160px;
+    height: 20px;
     margin: 0;
     color: white;
 }
@@ -849,13 +854,9 @@ body {
 }
 
 #roll li {
-    height: 38px;
-    line-height: 38px;
+    height: 20px;
+    line-height: 20px;
     color: white;
-    text-overflow: ellipsis;
-   white-space: nowrap;
-   overflow: hidden;
-   width : 100px;
 }
 </style>
 <style type="text/css">
@@ -1071,7 +1072,7 @@ $(window).load(function () {
 <nav class=" bg-light navbar-expand-lg navbar-light d-flex flex-wrap align-items-center justify-content-md-between  py-1 ">
       
 
-      <ul class="nav col-12 col-md-auto  justify-content-center mb-md-0  ml-5">
+      <ul class="nav col-12 col-md-auto  justify-content-center mb-md-0  ml-5 ">
       <c:choose>
           <c:when test="${empty login}">
             <li><a href="/" class="nav-link px-2 link-secondary text-dark">Home</a></li>
@@ -1114,7 +1115,7 @@ $(window).load(function () {
     </nav>
 
 <main style="background-color: white;">
-<nav class="navbar   justify-content-center  align-items-center pt-5" >
+<nav class="navbar   justify-content-center  align-items-center pt-5 " >
 <ul class="nav ">
 
 <li class="nav-item ">
@@ -1140,7 +1141,7 @@ $(window).load(function () {
     <form class="form-inline   f-search" action="/search/search">
       <div class="input-group  put">
          <div class="cat-box">
-            <button class="btn btn-outline-dark cat-label" type="button" data-toggle="dropdown" aria-expanded="false">All</button>
+            <button class="btn btn-outline-secondary cat-label" type="button" data-toggle="dropdown" aria-expanded="false">All</button>
             <input id="cat-val" name="item_category" type="hidden" value="">
             <div class="dropdown-menu cat-menu">
 
@@ -1158,7 +1159,7 @@ $(window).load(function () {
   
 </nav>
 
-<nav class=" bg-light  d-flex flex-wrap align-items-center justify-content-center  py-1 px-5">
+<nav class=" bg-light  d-flex flex-wrap align-items-center justify-content-center  py-1 px-5 shadow-sm">
       
 
       <ul class="nav mx-5 ">
@@ -1232,7 +1233,7 @@ $(window).load(function () {
       for(var i =0; i<result.length;i++){
                 if(i< 10){
                 var lists = result[i].keyword;
-                $("ol").append("<li><a javascript:void(0)>"+(i+1)+"위 :"+lists+"</a></li>");
+                $(".ranklist").append("<li><a javascript:void(0)>"+(i+1)+"위 :"+lists+"</a></li>");
                 rolltext();
                 }
              }
