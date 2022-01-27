@@ -54,7 +54,7 @@
 				
 				<li>
 					<p class="product_article_tit">가격</p>
-					<p class="product_article_contents">${ivo.item_price}</p>
+					<p class="product_article_contents">${ivo.item_price} 원</p>
 				</li>
 				<li>
 					<p class="product_article_tit">할인률</p>

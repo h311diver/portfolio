@@ -16,8 +16,17 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/resources/js/file.js" type="text/javascript"></script>
+<style>
+.text-stroke {
+ 
+    text-shadow:
+    0px 3px 3px rgba(0, 0, 0, 0.66);
+}
+</style>
 </head>
 <body>
+
+
 
 
 	<jsp:include page="header.jsp" />
@@ -25,6 +34,7 @@
 	<jsp:include page="sidebar.jsp" />
 
 	<section class="container ">
+	<br>
 	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -33,24 +43,24 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <img style="height: 400px;" src="/resources/img/manager00.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+    <img style="height: 400px;" src="/resources/img/main01.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-stroke">
+        <h5>믿을 수 있는 소싱</h5>
+        <p>세계 최고 품질의 다이아몬드는 원석의 출처를 아는것부터 시작됩니다.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img style="height: 400px;" src="/resources/img/manager02.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+      <img style="height: 400px;" src="/resources/img/main02.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-stroke">
+        <h5>나만의 방식으로 사랑하세요</h5>
+        <p>누구를 위한 것인지 언제가 좋은 타이밍인지 알게 될 거예요.</p>
       </div>
     </div>
     <div class="carousel-item">
-    <img style="height: 400px;" src="/resources/img/manager03.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+    <img style="height: 400px;" src="/resources/img/main03.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-stroke">
+        <h5>노트를 소개합니다</h5>
+        <p>안야 테일러 조이는 뉴욕의 거리는 우리 모두의 것임을 보여줍니다.</p>
       </div>
     </div>
   </div>
