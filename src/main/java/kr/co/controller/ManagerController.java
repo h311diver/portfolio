@@ -37,6 +37,7 @@ import kr.co.domain.OrderVO;
 import kr.co.domain.OrdersVO;
 import kr.co.domain.PageTO;
 import kr.co.service.ManagerService;
+import kr.co.service.MemberService;
 
 
 @Controller
@@ -46,7 +47,7 @@ public class ManagerController {
 	@Inject
 	private ManagerService mService;
 	
-
+	private MemberService memberService;
 	
 	
 	
@@ -192,19 +193,20 @@ public class ManagerController {
 		@RequestMapping(value = "/managerLogin", method = RequestMethod.POST)
 		public String login(HttpServletRequest request, ManagerVO vo, RedirectAttributes rttr) {
 			HttpSession session = request.getSession();
-			ManagerVO managerLogin = mService.managerLogin(vo);
+		
 			
+			
+			ManagerVO managerLogin = mService.managerLogin(vo);
 			if(managerLogin == null) {
 	            session.setAttribute("managerLogin", null);
 	            rttr.addFlashAttribute("msg", false);
 	            return "/manager/managerLogin";
 	        } else {
+	        	
 	            session.setAttribute("managerLogin", managerLogin);
 	            return "redirect:/manager/main/"+ managerLogin.getManager_id();
 	        }
 
-			
-			
 	    }
 	 
 

@@ -27,15 +27,15 @@
 					
 					
 					<c:if test="${not empty managerLogin}">
-					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>${managerLogin.manager_id } 님의 관리 메뉴</span> <a
+					<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-dark font-weight-bolder">
+						<span class="font-weight-bolder">${managerLogin.manager_name } 님의 관리 메뉴</span> <a
 							class="d-flex align-items-center text-muted" href="#"
 							aria-label="Add a new report"> <span
 							data-feather="plus-circle"></span>
 						</a>
 					</h6>
 					<br>
-					<ul class="nav flex-column mb-2">
+					
 						
 						<li class="nav-item"><a class="nav-link text-dark" href="/category/list/">
 								<span data-feather="file-text"></span> 카테고리 관리
@@ -52,8 +52,42 @@
 						<li class="nav-item"><a class="nav-link text-dark" href="/qna/listOfAll">
 								<span data-feather="file-text"></span> QnA 목록 관리
 						</a></li>
-					</ul>
+					
 					</c:if>
+					
+					
+					
+					<c:if test="${empty managerLogin}">
+					<c:choose>
+          <c:when test="${empty login}">
+   
+           <li><a href="/member/loginUI" class="nav-link px-2 link-dark text-dark">내 찜 목록</a></li>
+           <li><a href="/member/loginUI" class="nav-link px-2 link-dark text-dark">장바구니</a></li>
+           <li><a href="/member/loginUI" class="nav-link px-2 link-dark text-dark">주문배송조회</a></li>
+           <li><a href="/member/loginUI" class="nav-link px-2 link-dark text-dark">내 리뷰</a></li>
+           <li><a href="/member/loginUI" class="nav-link px-2 link-dark text-dark">내 상품Q&A</a></li>
+          </c:when>
+          
+          <c:when test="${not empty login}">
+ 
+           <li><a href="/likeitem/list/${login.member_id}" class="nav-link px-2 link-dark text-dark">내 찜 목록</a></li>
+           <li><a href="/cart/read/${login.member_id}" class="nav-link px-2 link-dark text-dark">장바구니</a></li>
+           <li><a href="/order/detail/${login.member_id}" class="nav-link px-2 link-dark text-dark">주문배송조회</a></li>
+           <li><a href="/Myreplies/list/${login.member_id}" class="nav-link px-2 link-dark text-dark">내 리뷰</a></li>
+           <li><a href="/qna/listForMember/${login.member_id}" class="nav-link px-2 link-dark text-dark">내 상품Q&A</a></li>
+  
+          </c:when>
+          </c:choose>
+					</c:if>
+					
+					
+					
+					
+					
+					
+					
+					
+					
 				</div>
 			</nav>
 			

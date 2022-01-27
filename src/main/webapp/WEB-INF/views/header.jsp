@@ -1093,24 +1093,27 @@ $(window).load(function () {
            <li><a href="/qna/listForMember/${login.member_id}" class="nav-link px-2 link-dark text-dark">내 상품Q&A</a></li>
             <li><a href="/fnq/list" class="nav-link px-2 link-dark text-dark">자주 묻는 질문</a></li>
           </c:when>
+          
+          
         </c:choose>
      
       </ul>
 
-      <div class="col-md-3 text-end">
+      <div class=" mr-5">
         <c:choose>
           <c:when test="${empty login}">
-            <a class="btn btn-outline-dark btn-sm" href="/member/loginUI">로그인</a>
+            <a class="btn btn-outline-dark btn-sm" href="/member/loginUI">회원 로그인</a>
             <a class="btn btn-outline-dark btn-sm" href="/member/insert">회원가입</a>
           </c:when>
           
           <c:when test="${not empty login}">
-            ${login.member_id} 님, 환영합니다. 
+            ${login.member_id}님, 환영합니다.
             <a class="btn btn-outline-primary btn-sm" href="/member/read/${login.member_id}">회원 정보 보기</a> 
             <a class="btn btn-outline-primary btn-sm" href="/member/logout">로그아웃</a>
           </c:when>
         </c:choose>
-        <a class="btn btn-outline-danger  mx-5  text-decoration-none" href="/manager/main">관리자페이지</a>
+        <c:if test="${empty managerLogin }"><a class="btn btn-outline-danger  ml-5  text-decoration-none" href="/manager/main">관리자페이지</a></c:if>
+        <c:if test="${not empty managerLogin }"><a class="btn btn-outline-danger  ml-5  text-decoration-none" href="/manager/main">관리자로 로그인중</a></c:if>
       </div>
     </nav>
 

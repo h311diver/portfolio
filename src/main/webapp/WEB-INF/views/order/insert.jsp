@@ -249,7 +249,7 @@ span.input-group-text{
 			<hr class="hr1" align="left">
 			<input type="hidden" name="ilist" value="${ilist}"> <input
 				type="hidden" name="clist" value="${clist}"> <input
-				class="btn btn-success" type="submit" value="결제완료">
+				class="btn btn-success" type="submit" value="결제하기">
 			<button class="btn btn-danger" type="button" id="cancel">결제취소</button>
 		</form>
 	</div>

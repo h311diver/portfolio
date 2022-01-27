@@ -97,11 +97,11 @@ a {
 	<c:if test="${!empty managerLogin.manager_code}">
 	
 		
-		<button class="updateui">수정 화면</button>
+		<button class="updateui btn btn-sm btn-outline-warning">내용 수정</button>
 		</c:if>
 </div>
 	<div style="border: 1px solid #ddd; margin-right: 15%; margin-bottom: 20px" class="container-fluid"	>
-	
+	<br><br>
 		<div class="container-fluid" >
 		<jsp:include page="../review/list.jsp" />
 		</div>
@@ -112,10 +112,10 @@ a {
 	
 	<div class="quickmenu" >
 		
-			<button id="btn1" class=" btn btn-secondary btn-sm btn-block "> <i class="bi bi-chevron-bar-up" style="font-size: 20px"></i> </button> <br> <br>
-			<button id="btn3" class=" btn btn-secondary btn-sm btn-block">리뷰 <br>바로가기</button>
-			<button id="btn2" class=" btn btn-secondary btn-sm btn-block">QnA <br>바로가기</button> <br> <br>
-			<button id="btn4" class=" btn btn-secondary btn-sm btn-block "> <i class="bi bi-chevron-bar-down" style="font-size: 20px"></i> </button>
+			<button id="btn1" class=" btn btn-secondary btn-sm  "> <i class="bi bi-chevron-bar-up" style="font-size: 20px"></i> </button> <br> <br>
+			<button id="btn3" class=" btn btn-secondary btn-sm ">리뷰 <br>바로가기</button>
+			<button id="btn2" class=" btn btn-secondary btn-sm ">QnA <br>바로가기</button> <br> <br>
+			<button id="btn4" class=" btn btn-secondary btn-sm  "> <i class="bi bi-chevron-bar-down" style="font-size: 20px"></i> </button>
 		
 	</div>
 	<br>

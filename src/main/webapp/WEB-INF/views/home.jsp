@@ -33,8 +33,9 @@
 	<jsp:include page="header.jsp" />
 
 	<jsp:include page="sidebar.jsp" />
-
+<jsp:include page="popup.jsp" />
 	<section class="container ">
+	
 	<br>
 	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">

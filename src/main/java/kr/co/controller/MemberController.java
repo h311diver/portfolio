@@ -1,6 +1,9 @@
 package kr.co.controller;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,12 +27,16 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginPost(MemberVO vo, Model model) {
+	public String loginPost(HttpServletRequest request, MemberVO vo, Model model) {
+		
 		MemberVO login = mService.login(vo);		
+		
+		
 		model.addAttribute("login", login);	
+		
 		return "member/read";
-	}
-	
+			
+	}	
 	@RequestMapping(value = "/loginUI", method = RequestMethod.GET)
 	public String login() {
 		return "member/login";
