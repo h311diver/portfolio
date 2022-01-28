@@ -34,37 +34,59 @@ font-size:16px; font-weight:600; width: 40px; height : 30px;color:black; float: 
 	color : black;width: 50px;height : 40px;
 }
 </style>
-<script language="JavaScript">
-//head 태그 안에 스크립트 선언
-        function setCookie( name, value, expiredays ) {
-            var todayDate = new Date();
-            todayDate.setDate( todayDate.getDate() + expiredays ); 
-            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-        }
-        function closePop() {
-            if ( document.pop_form.chkbox.checked ){
-                setCookie( "maindiv", "done" , 1 );
-            }
-            document.all['layer_popup'].style.visibility = "hidden";
-        }
-</script>
- <script language="Javascript">
-    cookiedata = document.cookie;   
-    if ( cookiedata.indexOf("maindiv=done") < 0 ){     
-        document.all['layer_popup'].style.visibility = "visible";
+<script>
+    //쿠키설정    
+    function setCookie( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
     }
-    else {
-        document.all['layer_popup'].style.visibility = "hidden";
-    }
-</script>
 
+    //쿠키 불러오기
+    function getCookie(name) 
+    { 
+        var obj = name + "="; 
+        var x = 0; 
+        while ( x <= document.cookie.length ) 
+        { 
+            var y = (x+obj.length); 
+            if ( document.cookie.substring( x, y ) == obj ) 
+            { 
+                if ((endOfCookie=document.cookie.indexOf( ";", y )) == -1 ) 
+                    endOfCookie = document.cookie.length;
+                return unescape( document.cookie.substring( y, endOfCookie ) ); 
+            } 
+            x = document.cookie.indexOf( " ", x ) + 1; 
+            
+            if ( x == 0 ) break; 
+        } 
+        return ""; 
+    }
+
+    //닫기 버튼 클릭시
+    function closeWin(key)
+    {
+        if($("#todaycloseyn").prop("checked"))
+        {
+            setCookie('divpop'+key, 'Y' , 1 );
+        }
+        $("#divpop"+key+"").hide();
+    }
+  
+    $(function(){    
+        if(getCookie("divpop1") !="Y"){
+            $("#divpop1").show();
+        }
+    });
+</script>
 
 
 <!-- layer popup content -->
-<div class="layerPopup" id="layer_popup" style="visibility: visible;">
+<div class="layerPopup divpop" id="divpop1" style="visibility: visible;">
     <div class="layerBox">
         <h4 class="title">프로젝트 알림!!</h4>
          <h6>현재진행형인 프로젝트입니다.  이해부탁드립니다.</h6>
+         <h6>대부분의 데이터가 동적으로 DB에 저장되어있습니다.</h6>
          <h6>관리자계정은 관리자 페이지에서 로그인해주세요.</h6>
          <br>
          <h6>관리자ID: admin </h6>
@@ -73,10 +95,14 @@ font-size:16px; font-weight:600; width: 40px; height : 30px;color:black; float: 
            <h6>회원ID: m001 </h6>
             <h6>회원PW: 1111 </h6>
         <hr>
-          <form name="pop_form">
-        <div id="check" ><input type="checkbox" name="chkbox" value="checkbox" id='chkbox' >
-        <label for="chkbox">&nbsp&nbsp오늘 하루동안 보지 않기</label></div>
-		<div id="close" ><a href="javascript:closePop();">닫기</a></div>    
-		</form>
+          <form name="notice_form">
+        
+          
+           <div class="button_area">
+               <!-- <input type='checkbox' name='chkbox' id='todaycloseyn' value='Y'> 하루동안 안볼래요  -->   
+               <a href='javascript:void(0)' onclick="javascript:closeWin(1);"><B>[닫기]</B></a>
+           </div>
+
+  </form>
 	</div>
 </div>

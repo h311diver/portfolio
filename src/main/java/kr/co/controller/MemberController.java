@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.co.domain.MemberVO;
 import kr.co.service.MemberService;
@@ -27,14 +28,19 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginPost(HttpServletRequest request, MemberVO vo, Model model) {
-		
+	public String loginPost(HttpServletRequest request, MemberVO vo, RedirectAttributes rttr) {
+		HttpSession session = request.getSession();
 		MemberVO login = mService.login(vo);		
 		
 		
-		model.addAttribute("login", login);	
-		
-		return "member/read";
+		if(login == null) {
+            session.setAttribute("login", null);
+            rttr.addFlashAttribute("msg", false);
+            return "/memner/login";
+        } else {
+            session.setAttribute("login", login);
+            return "redirect:/";
+        }
 			
 	}	
 	@RequestMapping(value = "/loginUI", method = RequestMethod.GET)

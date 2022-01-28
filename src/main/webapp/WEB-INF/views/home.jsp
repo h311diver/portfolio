@@ -23,7 +23,103 @@
     text-shadow:
     0px 3px 3px rgba(0, 0, 0, 0.66);
 }
+
+.icon-cards {
+  position: relative;
+ width: 100%;
+  height: 28%;
+ 
+  margin: 0;
+  color: white;
+  perspective: 1000px;
+  transform-origin: center;
+}
+.icon-cards__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: translateZ(-30vw) rotateY(0);
+  animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.icon-cards__content.step-animation {
+  animation: carousel 8s infinite steps(1) forwards;
+}
+.icon-cards__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ width: 100%;
+  height: 100%;
+ 
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transform-origin: center;
+}
+.icon-cards__item:nth-child(1) {
+  background: #FDD94F;
+  transform: rotateY(0) translateZ(35vw);
+}
+.icon-cards__item:nth-child(2) {
+  background: #F87949;
+  transform: rotateY(120deg) translateZ(35vw);
+}
+.icon-cards__item:nth-child(3) {
+  background: #FBAB48;
+  transform: rotateY(240deg) translateZ(35vw);
+}
+
+@keyframes carousel {
+  0%, 17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%, 45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%, 72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%, 100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+
+@keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
 </style>
+<script>
+function classToggle() {
+	  var el = document.querySelector('.icon-cards__content');
+	  el.classList.toggle('step-animation');
+	}
+
+	document.querySelector('#toggle-animation').addEventListener('click', classToggle);
+</script>
 </head>
 <body>
 
@@ -33,59 +129,46 @@
 	<jsp:include page="header.jsp" />
 
 	<jsp:include page="sidebar.jsp" />
-<jsp:include page="popup.jsp" />
-	<section class="container ">
+
+	<jsp:include page="popup.jsp" />
+	
+	<div class="container ">
+<br><br><br><br><br>
+	
+	
+	
+	
+	
+	<figure class="icon-cards mt-3  ">
+  <div class="icon-cards__content">
+    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img style="height: 400px;" src="/resources/img/main01.png" class="d-block w-100" alt="..."></div>
+    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img style="height: 400px;" src="/resources/img/main02.png" class="d-block w-100" alt="..."></div>
+    <div class="icon-cards__item d-flex align-items-center justify-content-center"><img style="height: 400px;" src="/resources/img/main03.png" class="d-block w-100" alt="..."></div>
+
+  </div>
+</figure>
+
+
+	
+	
+	
+	
 	
 	<br>
-	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height: 400px;" src="/resources/img/main01.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-stroke">
-        <h5>믿을 수 있는 소싱</h5>
-        <p>세계 최고 품질의 다이아몬드는 원석의 출처를 아는것부터 시작됩니다.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img style="height: 400px;" src="/resources/img/main02.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-stroke">
-        <h5>나만의 방식으로 사랑하세요</h5>
-        <p>누구를 위한 것인지 언제가 좋은 타이밍인지 알게 될 거예요.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-    <img style="height: 400px;" src="/resources/img/main03.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block text-stroke">
-        <h5>노트를 소개합니다</h5>
-        <p>안야 테일러 조이는 뉴욕의 거리는 우리 모두의 것임을 보여줍니다.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev btn btn-link" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <button class="carousel-control-next btn btn-link text-dark" type="button" data-target="#carouselExampleCaptions" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </button>
-</div>
+	
 		
 		<div style="margin-top: 100px;">
 		<h4>전체 상품 랭킹</h4>
 		<div class="uploadedList row row-cols-3 row-cols-sm-4 row-cols-md-5 g-3">
 		</div>
 		</div>
-	</section>
+	
+	
 
 
 
 	<jsp:include page="footer.jsp" />
+	</div>
 <script type="text/javascript">
 $(document).ready(function(){
  	var vo = "${list}";

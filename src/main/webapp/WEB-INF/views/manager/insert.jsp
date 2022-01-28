@@ -62,21 +62,21 @@
 			</div>
 
 			<div class="col-8">
-				<label for="text" class="form-label">이름 </label> <input
+				<label for="manager_name" class="form-label">이름 </label> <input
 					type="text" class="form-control" name="manager_name"
 					placeholder="name" required="required" maxlength="25">
 
 			</div>
 
 			<div class="col-8">
-				<label for="address" class="form-label">핸드폰 번호</label> <input
+				<label for="manager_phone" class="form-label">핸드폰 번호</label> <input
 					type="number" class="form-control" name="manager_phone"
 					placeholder="- 제외하고 숫자만" required="required" min='9' max='15'>
 
 			</div>
 
 			<div class="col-8">
-				<label for="address2" class="form-label">이메일</label> <input
+				<label for="manager_email" class="form-label">이메일</label> <input
 					type="email" class="form-control" name="manager_email"
 					placeholder="you@examplpe.com" required="required" maxlength="30">
 			</div>

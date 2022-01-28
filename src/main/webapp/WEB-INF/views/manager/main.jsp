@@ -2857,7 +2857,7 @@ body {
 
 	<div class="mx-5 mt-3 ">
 		<h1 class="display-4 text-light">DAPAN & DA.</h1>
-		<p class="lead text-light">여기는 관리자, 경영자를 위한 페이지입니다. [관리자ID: admin  PW: 1111]</p>
+		<p class="lead text-light">여기는 관리자, 경영자를 위한 페이지입니다.</p>
 		<hr class="my-4" style="background-color: white;">
 
 		<p class="text-light">

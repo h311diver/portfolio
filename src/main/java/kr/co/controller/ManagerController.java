@@ -202,7 +202,6 @@ public class ManagerController {
 	            rttr.addFlashAttribute("msg", false);
 	            return "/manager/managerLogin";
 	        } else {
-	        	
 	            session.setAttribute("managerLogin", managerLogin);
 	            return "redirect:/manager/main/"+ managerLogin.getManager_id();
 	        }

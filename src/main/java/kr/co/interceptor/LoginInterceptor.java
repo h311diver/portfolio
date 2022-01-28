@@ -18,28 +18,13 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {		
 		HttpSession session = request.getSession();
 		Object login = session.getAttribute("login");
-		if(login != null) {
+		Object managerLogin = session.getAttribute("managerLogin");
+		if(managerLogin != null || login != null) {
 			session.invalidate();
 		}
 		return true;
 	}
 	
-	@Override
-	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-		Map<String, Object> map = modelAndView.getModel();		
-		MemberVO login = (MemberVO) map.get("login");
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("login", login);	
-		
-		
-		 String where = (String) session.getAttribute("where");
-		  
-		 if(where == null) {  
-			 response.sendRedirect("../");
-		 }else {
-			 response.sendRedirect(where); 
-		 }
-	}
+	
 
 }
