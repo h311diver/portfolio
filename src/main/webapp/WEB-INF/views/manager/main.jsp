@@ -2922,24 +2922,71 @@ body {
 	<br>
 	<br>
 	<br>
-	
-	<div id="carouselExampleSlidesOnly " class="carousel slide"
-		data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img style="height: 550px;" src="/resources/img/manager00.jpg" class="d-block w-100"
-					alt="...">
-			</div>
-			<div class="carousel-item">
-				<img style="height: 550px;" src="/resources/img/manager02.jpg"
-					class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img style="height: 550px;" src="/resources/img/manager03.png" class="d-block w-100"
-					alt="...">
-			</div>
-		</div>
-	</div>
+	<div class="container">
+	<div class="card-columns">
+  <div class="card">
+    <img src="/resources/img/card01.png" class="card-img-top" alt="..." style="width: 350px; height: 200px">
+    <div class="card-body">
+      <h5 class="card-title">매출이 표시되는 달력</h5>
+      <p class="card-text">하루 매출이 동적으로 달력에 표시됩니다! 고객이 주문을 하면 주문서의 가격이 그날의 매출에 더해집니다. 한번 테스트해보세요!</p>
+    </div>
+  </div>
+  <div class="card p-3">
+    <blockquote class="blockquote mb-0 card-body bg-light">
+      <p>주문리스트를 엑셀파일로 다운받을 수 있습니다!</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          이 기능 역시 경영자만이 가능합니다
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <img src="/resources/img/card02.png" class="card-img-top" alt="..." style="width: 350px; height: 200px">
+    <div class="card-body">
+      <h5 class="card-title">이달의 판매량 순위</h5>
+      <p class="card-text">한달동안 가장 많이 팔린 순위대로 데이터가 동적으로 차트에 표시됩니다! 지금 바로 테스트해보세요!</p>
+      <p class="card-text"><small class="text-muted">데이터가 없거나 단 하나만 있어도 표시됩니다.</small></p>
+    </div>
+  </div>
+  <div class="card bg-primary text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p>오직 경영자만이 로그인 후 통계를 확인할 수 있습니다.</p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          by JOON
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">인기 검색어</h5>
+      <p class="card-text">메인 화면에 인기 검색어 순위가 동적으로 구현되어 있습니다. 경영자는 검색된 횟수의 통계까지 확인이 가능합니다!</p>
+      <p class="card-text"><small class="text-muted">6위까지 확인가능</small></p>
+    </div>
+  </div>
+  <div class="card">
+   <img src="/resources/img/card03.png" class="card-img-top" alt="..." style="width: 350px; height: 200px">
+  </div>
+  <div class="card p-3 text-right">
+    <blockquote class="blockquote mb-0">
+      <p>카테고리별 판매1위 제품</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+         카테고리별 가장 많이 팔린 제품이 무엇인지 궁금하지 않습니까? 어서 경영자로 로그인해 확인해보세요 
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">기타</h5>
+      <p class="card-text">인기(찜)	순위, 연령대별 회원 수 등 많은 통계가 동적으로 구현되어있습니다. 어서 테스트해보세요!</p>
+      <p class="card-text"><small class="text-muted">모든 데이터가 동적으로 구현되어있습니다.</small></p>
+    </div>
+  </div>
+</div>
 
 
 
