@@ -89,18 +89,20 @@ font-size:16px; font-weight:600; width: 40px; height : 30px;color:black; float: 
          <h6>대부분의 데이터가 동적으로 DB에 저장되어있습니다.</h6>
          <h6>관리자계정은 관리자 페이지에서 로그인해주세요.</h6>
          <br>
-         <h6>관리자ID: admin </h6>
-          <h6>관리자PW: 1111 </h6>
+         <h6 style="font-family: initial;">관리자ID: admin </h6>
+          <h6 style="font-family: initial;">관리자PW: 1111 </h6>
           
-           <h6>회원ID: m001 </h6>
-            <h6>회원PW: 1111 </h6>
+           <h6 style="font-family: initial;">회원ID: m001 </h6>
+            <h6 style="font-family: initial;">회원PW: 1111 </h6>
         <hr>
           <form name="notice_form">
         
           
            <div class="button_area">
-               <!-- <input type='checkbox' name='chkbox' id='todaycloseyn' value='Y'> 하루동안 안볼래요  -->   
-               <a href='javascript:void(0)' onclick="javascript:closeWin(1);"><B>[닫기]</B></a>
+               <input  type='checkbox' name='chkbox' id='todaycloseyn' value='Y'> [작동예정]
+               <a  href='javascript:void(0)' onclick="javascript:closeWin(1);"><B>
+               &nbsp; &nbsp; &nbsp; [닫기]
+               </B></a>
            </div>
 
   </form>

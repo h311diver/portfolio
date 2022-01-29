@@ -133,8 +133,7 @@ function classToggle() {
 	<jsp:include page="popup.jsp" />
 	
 	<div class="container ">
-<br><br><br><br><br>
-	
+<br>
 	
 	
 	
@@ -159,7 +158,7 @@ function classToggle() {
 		
 		<div style="margin-top: 100px;">
 		<h4>전체 상품 랭킹</h4>
-		<div class="uploadedList row row-cols-3 row-cols-sm-4 row-cols-md-5 g-3">
+		<div style="font-size: 1.2rem;" class="uploadedList row row-cols-3 row-cols-sm-4 row-cols-md-5 g-3">
 		</div>
 		</div>
 	

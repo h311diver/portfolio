@@ -6,7 +6,7 @@
 
 
 <style type="text/css">
-
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 #rolling {
  	margin-bottom: -10px;
@@ -126,10 +126,10 @@ height : 38px;
 }
 
 * {
-font-size: 1.2rem;
-	 font-family: 'Nanum Pen Script', cursive;
-	letter-spacing: 0.1rem;
-	text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.66);
+font-size: 1.1rem;
+	 font-family: 'Jua', sans-serif;
+	
+	
 	
 	
 }
@@ -203,7 +203,7 @@ $(window).load(function () {
     <form class="form-inline   f-search" action="/search/search">
       <div class="input-group  put">
          <div class="cat-box">
-            <button style="padding-bottom: 37px;" class="btn btn-outline-secondary cat-label" type="button" data-toggle="dropdown" aria-expanded="false">모두검색</button>
+            <button style="padding-bottom: 30px; padding-top: 10px;" class="btn btn-outline-secondary cat-label" type="button" data-toggle="dropdown" aria-expanded="false">모두검색</button>
             <input id="cat-val" name="item_category" type="hidden" value="">
             <div class="dropdown-menu cat-menu">
 

@@ -74,7 +74,7 @@
 										<button data-ea="${ovo.ea}"
 											data-order_date="${ovo.order_date}" data-price="${ovo.price}"
 											data-member_id="${ovo.member_id}"
-											data-order_id="${ovo.order_id}" class="btn_cancel">주문취소</button>
+											data-order_id="${ovo.order_id}" class="btn_cancel btn btn-outline-primary btn-sm">주문취소</button>
 										
 									</c:if> <c:if test="${ovo.status == '교환' || ovo.status == '환불'}">
 										<p>진행중</p>
@@ -82,11 +82,11 @@
 										<button data-ea="${ovo.ea}"
 											data-order_date="${ovo.order_date}" data-price="${ovo.price}"
 											data-member_id="${ovo.member_id}"
-											data-order_id="${ovo.order_id}" class="btn_ex_re">교환/환불</button>
-										<input class="btn_review" data-item_no ="${ovo.item_no}" type="button" value="리뷰쓰기"/>
+											data-order_id="${ovo.order_id}" class="btn_ex_re btn btn-outline-primary btn-sm">교환/환불</button>
+										<input class="btn_review btn btn-outline-primary btn-sm" data-item_no ="${ovo.item_no}" type="button" value="리뷰쓰기"/>
 									</c:if> <c:if
 										test="${ovo.status == '교환완료' || ovo.status == '환불완료' || ovo.status == '취소'}">
-										<p>완료</p>
+										<p style="color: blue;">완료</p>
 									</c:if></td>
 
 							</tr>

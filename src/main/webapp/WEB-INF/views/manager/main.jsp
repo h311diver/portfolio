@@ -2876,14 +2876,14 @@ body {
   <button class="btn btn-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
     관리자/경영자 로그인
   </button>
-    <form class="dropdown-menu p-2 border-primary " aria-labelledby="dropdownMenu2" action="/manager/managerLogin", method="post">
+    <form class="dropdown-menu p-2 border-secondary " aria-labelledby="dropdownMenu2" action="/manager/managerLogin", method="post">
   <div class="form-group">
     <label for="exampleDropdownFormEmail2">아이디</label>
-    <input type="text" class="form-control border-primary" id="exampleDropdownFormEmail2" name="manager_id" placeholder="ID" required="required">
+    <input type="text" class="form-control border-secondary" id="exampleDropdownFormEmail2" name="manager_id" placeholder="ID" required="required">
   </div>
   <div class="form-group">
     <label for="exampleDropdownFormPassword2">비밀번호</label>
-    <input type="password" class="form-control border-primary" id="exampleDropdownFormPassword2" name="manager_pw" placeholder="Password" required="required">
+    <input type="password" class="form-control border-secondary" id="exampleDropdownFormPassword2" name="manager_pw" placeholder="Password" required="required">
   </div>
  
   <button type="submit" class="btn btn-outline-primary btn-sm btn-block">로그인</button>
@@ -2949,12 +2949,12 @@ body {
       <p class="card-text"><small class="text-muted">데이터가 없거나 단 하나만 있어도 표시됩니다.</small></p>
     </div>
   </div>
-  <div class="card bg-primary text-white text-center p-3">
+  <div class="card bg-dark text-white font-weight-bold text-center p-3">
     <blockquote class="blockquote mb-0">
       <p>오직 경영자만이 로그인 후 통계를 확인할 수 있습니다.</p>
       <footer class="blockquote-footer text-white">
         <small>
-          by JOON
+         경영자ID: admin &nbsp; &nbsp; &nbsp; &nbsp; PW: 1111
         </small>
       </footer>
     </blockquote>

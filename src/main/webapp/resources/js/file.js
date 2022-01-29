@@ -38,7 +38,7 @@ function uploadedItemForlist(filename, item_no, item_name){
 					<img class="card-img-top" src="${getImageUrl(filename)}">
 				<div class="card-body">
 					<p class="card-text">
-						<a style="text-decoration: none; font-size : small; color: #000;" href="/item/read/${item_no}">${item_name}</a>
+						<a style="text-decoration: none; font-size : 1.2rem; color: #000;" href="/item/read/${item_no}">${item_name}</a>
 					</p>
 				</div>
 			</div>
@@ -67,7 +67,7 @@ function uploadedItemForRank(filename, item_no, item_name, i){
 					<img class="card-img-top" src="${getImageUrl(filename)}">
 				<div class="card-body">
 					<p class="card-text">
-						<a style="text-decoration: none; font-size : small; color: #000;" href="/item/read/${item_no}">${item_name}</a>
+						<a style="text-decoration: none; font-size : 1.2rem; color: #000;" href="/item/read/${item_no}">${item_name}</a>
 					</p>
 				</div>
 			</div>

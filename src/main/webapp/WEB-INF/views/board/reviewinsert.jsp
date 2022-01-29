@@ -33,6 +33,12 @@
 						작성자<input class="form-control" name="member_id" id="member_id" value="${login.member_id }" readonly>
 					</div>	
 					<div>
+						
+						
+						
+						
+						
+						
 						평점 : <select name="review_grade" id="review_grade">
 							<option value=5 selected>5점</option>
 							<option value=4>4점</option>
@@ -40,6 +46,16 @@
 							<option value=2>2점</option>
 							<option value=1>1점</option>
 						</select><br>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 					</div><br>
 					
 					
