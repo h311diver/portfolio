@@ -30,4 +30,8 @@ public interface ReviewDAO {
 
 	List<ReviewVO> listOfAll(PageTO<ReviewVO> pt);
 
+	List<Object> list(String member_id);
+
+
+
 }

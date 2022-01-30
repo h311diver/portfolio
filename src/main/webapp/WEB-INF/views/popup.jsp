@@ -101,7 +101,7 @@ font-size:16px; font-weight:600; width: 40px; height : 30px;color:black; float: 
            <div class="button_area">
                <input  type='checkbox' name='chkbox' id='todaycloseyn' value='Y'> [작동예정]
                <a  href='javascript:void(0)' onclick="javascript:closeWin(1);"><B>
-               &nbsp; &nbsp; &nbsp; [닫기]
+               &nbsp; &nbsp; [닫기]
                </B></a>
            </div>
 

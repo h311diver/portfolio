@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +38,7 @@ import kr.co.service.CategoryService;
 import kr.co.service.ItemService;
 import kr.co.service.MemberService;
 import kr.co.service.OrderService;
+import kr.co.service.ReviewService;
 
 @Controller
 @RequestMapping("order")
@@ -54,7 +56,8 @@ public class OrderController {
 	@Inject
 	private ItemService iService;
 	
-	
+	@Inject
+	private ReviewService rService;
 
 	@RequestMapping(value = "/insert/{member_id}", method = RequestMethod.GET)
 	public String insertui(@PathVariable("member_id") String member_id, Model model) {
@@ -177,7 +180,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value = "/detail/{member_id}", method = RequestMethod.GET)
-	public String detail(PageTO<OrdersVO> pt,@PathVariable("member_id") String member_id, Model model) {
+	public String detail(PageTO<OrdersVO> pt,@PathVariable("member_id") String member_id, Model model) throws JsonProcessingException {
 		
 		pt.setCurPage(1);
 		
@@ -186,6 +189,10 @@ public class OrderController {
 		model.addAttribute("pt", pt);
 		model.addAttribute("member_id", member_id);
 		
+		List<Object> reviewList = rService.list(member_id);
+		model.addAttribute("reviewList", reviewList);
+		String reviewList1 = new ObjectMapper().writeValueAsString(reviewList);
+		model.addAttribute("reviewList1", reviewList1);
 		return "order/memberdetail";
 	}
 	

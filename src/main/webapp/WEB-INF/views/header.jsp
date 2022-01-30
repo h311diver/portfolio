@@ -141,20 +141,18 @@ font-size: 1.1rem;
 
 </style>
 
-<script>
-$(window).load(function () {
-    $('main').sakura();
-});
-</script>
+
 
 <nav class=" bg-light navbar-expand-lg navbar-light d-flex flex-wrap align-items-center justify-content-md-between  py-1 ">
       
 
       <ul class="nav col-12 col-md-auto  justify-content-center mb-md-0  ml-5 ">
    
-            <li><a href="/" class="nav-link px-2 link-secondary text-dark">Home</a></li>
+            <li><a href="/" class="nav-link px-2 link-secondary text-dark"> Home &nbsp;</a></li>
     
-            <li><a href="/fnq/list" class="nav-link px-2 link-dark text-dark">자주 묻는 질문</a></li>
+            <li><a href="/fnq/list" class="nav-link px-2 link-dark text-dark"> 자주 묻는 질문 &nbsp;</a></li>
+            
+            <li><a onclick="chat()" class="nav-link px-2 link-dark text-dark"> 판매자와 1대1채팅 </a></li>
     
      
       </ul>
@@ -233,7 +231,7 @@ $(window).load(function () {
            
       </ul>
     </nav>
-    
+    <br>
     
      <script type="text/javascript">
       var item_category = $(".cat-label").text();
@@ -320,6 +318,12 @@ $(window).load(function () {
    
    
    });
+   
+   
+   function chat() {
+	   var url="../../board/reviewinsert/"+board_no;
+       window.open(url,"","width=400,height=500,left=600");
+   }
    
    </script>
    <script type="text/javascript">

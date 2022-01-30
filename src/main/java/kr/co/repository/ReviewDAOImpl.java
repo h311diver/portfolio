@@ -100,6 +100,14 @@ public class ReviewDAOImpl implements ReviewDAO {
 		return sqlSession.selectList(NS +".listOfAll", null, rbs);
 	}
 
+	@Override
+	public List<Object> list(String member_id) {
+		
+		return sqlSession.selectList(NS+".list", member_id);
+	}
+
+	
+
 
 
 

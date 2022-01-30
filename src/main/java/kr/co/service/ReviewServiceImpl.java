@@ -123,6 +123,12 @@ public class ReviewServiceImpl implements ReviewService {
 		return pt;
 		}
 	}
+	@Override
+	public List<Object> list(String member_id) {
+		
+		return rDao.list(member_id);
+	}
+	
 
 
 

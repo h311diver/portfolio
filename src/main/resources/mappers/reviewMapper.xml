@@ -62,4 +62,7 @@
 	<select id="listOfAll" resultType="kr.co.domain.ReviewVO">
 		SELECT * FROM review ORDER BY review_no DESC
 	</select>
+	<select id="list" resultType="map">
+		SELECT * FROM review WHERE member_id = #{member_id}
+	</select>
 </mapper>

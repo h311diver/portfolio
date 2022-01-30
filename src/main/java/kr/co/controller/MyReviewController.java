@@ -62,6 +62,10 @@ public class MyReviewController {
 		return "review/listOfAll";
 	}
 	
+	
+	
+	
+	
 	@RequestMapping(value = "/listOfAll/{curPage}", method = RequestMethod.GET)
 	public String listOfAll(@PathVariable("curPage") int curPage,PageTO<ReviewVO> pt, Model model) {
 

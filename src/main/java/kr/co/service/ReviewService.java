@@ -24,4 +24,8 @@ public interface ReviewService {
 
 	PageTO<ReviewVO> listOfAll(PageTO<ReviewVO> pt);
 
+	List<Object> list(String member_id);
+
+	
+
 }

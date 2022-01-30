@@ -29,6 +29,12 @@
 	height: 100px;
 	}
   </style>
+  
+  <script>
+  ${reviewList}
+  </script>
+  
+  
 </head>
 	<jsp:include page="../header.jsp" />
 	<jsp:include page="../sidebar.jsp" />
@@ -83,8 +89,14 @@
 											data-order_date="${ovo.order_date}" data-price="${ovo.price}"
 											data-member_id="${ovo.member_id}"
 											data-order_id="${ovo.order_id}" class="btn_ex_re btn btn-outline-primary btn-sm">교환/환불</button>
-										<input class="btn_review btn btn-outline-primary btn-sm" data-item_no ="${ovo.item_no}" type="button" value="리뷰쓰기"/>
-									</c:if> <c:if
+										
+									
+										<input  class="btn_review btn btn-outline-primary btn-sm" data-item_no ="${ovo.item_no}" type="button" value="리뷰쓰기"/>
+							</c:if>
+							
+							
+							
+									 <c:if
 										test="${ovo.status == '교환완료' || ovo.status == '환불완료' || ovo.status == '취소'}">
 										<p style="color: blue;">완료</p>
 									</c:if></td>
@@ -105,6 +117,11 @@
 
 	<jsp:include page="../footer.jsp" />
 	<script type="text/javascript">
+
+	
+	
+	
+	
 	
 $(document).ready(function() {
 	var vo ="${pt.list}";

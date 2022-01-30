@@ -47,7 +47,7 @@ public class ManagerController {
 	@Inject
 	private ManagerService mService;
 	
-	private MemberService memberService;
+
 	
 	
 	
