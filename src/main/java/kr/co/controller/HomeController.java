@@ -35,11 +35,14 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/operator", method = RequestMethod.GET)
+	@RequestMapping(value = "/echo-ws", method = RequestMethod.GET)
 	public void home2() {
 		
-	
+		
 	}
-
+	
+	
+	
+	
 	
 }

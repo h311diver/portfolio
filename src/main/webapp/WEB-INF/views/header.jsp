@@ -151,9 +151,9 @@ font-size: 1.1rem;
             <li><a href="/" class="nav-link px-2 link-secondary text-dark"> Home &nbsp;</a></li>
     
             <li><a href="/fnq/list" class="nav-link px-2 link-dark text-dark"> 자주 묻는 질문 &nbsp;</a></li>
-            
-            <li><a onclick="chat()" class="nav-link px-2 link-dark text-dark"> 판매자와 1대1채팅 </a></li>
-    
+            <c:if test="${not empty login}">
+            <li><a href="javascript:void(0)" onclick="chat()" class="nav-link px-2 link-dark text-dark"> 판매자와 1대1채팅 </a></li>
+    		</c:if>
      
       </ul>
 
@@ -320,10 +320,10 @@ font-size: 1.1rem;
    });
    
    
-   function chat() {
-	   var url="../../board/reviewinsert/"+board_no;
-       window.open(url,"","width=400,height=500,left=600");
-   }
+  function chat() {
+	  var url="../../chat";
+      window.open(url,"","width=500,height=710,left=600");
+  }
    
    </script>
    <script type="text/javascript">
