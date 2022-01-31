@@ -128,10 +128,6 @@ height : 38px;
 * {
 font-size: 1.1rem;
 	 font-family: 'Jua', sans-serif;
-	
-	
-	
-	
 }
 
 
@@ -151,7 +147,7 @@ font-size: 1.1rem;
             <li><a href="/" class="nav-link px-2 link-secondary text-dark"> Home &nbsp;</a></li>
     
             <li><a href="/fnq/list" class="nav-link px-2 link-dark text-dark"> 자주 묻는 질문 &nbsp;</a></li>
-            <c:if test="${not empty login}">
+            <c:if test="${not empty login || not empty managerLogin}">
             <li><a href="javascript:void(0)" onclick="chat()" class="nav-link px-2 link-dark text-dark"> 판매자와 1대1채팅 </a></li>
     		</c:if>
      

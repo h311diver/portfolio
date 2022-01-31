@@ -17,7 +17,12 @@
 <meta charset="UTF-8">
 	<title>Chating</title>
 	<style>
-		
+		@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+		* {
+font-size: 1.1rem;
+	 font-family: 'Jua', sans-serif;
+}
+
 		.container{
 			width: 500px;
 			margin: 0 auto;
@@ -25,13 +30,10 @@
 		}
 		.container h1{
 			text-align: left;
-			padding: 5px 5px 5px 15px;
-			color: #FFBB00;
-			border-left: 3px solid #FFBB00;
 			margin-bottom: 20px;
 		}
 		.chating{
-			background-color: white;
+			background-color: #d9d9d9;
 			width: 450px;
 			height: 500px;
 			overflow: auto;
@@ -44,10 +46,7 @@
 			color: black;
 			text-align: left;
 		}
-		input{
-			width: 330px;
-			height: 25px;
-		}
+		
 		#yourMsg{
 			display: none;
 		}
@@ -121,30 +120,30 @@
 	}
 </script>
 <body>
-	<div id="container" class="container border border-secondary">
-	<c:if test="${not empty managerLogin }"><h1>판매자(online)</h1></c:if>
-		<c:if test="${empty managerLogin }"><h1>판매자(offline)</h1></c:if>
+	<div id="container" class="container ">
+	<h1>판매자에게 실시간 문의</h1>
 		<input type="hidden" id="sessionId" value="">
 		
-		<div id="chating" class="chating border border-primary">
+		<div id="chating" class="chating  rounded">
 		</div>
 		
+		
 		<div id="yourName">
-			<table class="inputTable table">
-				<tr>
-					<th><input type="hidden" name="userName" id="userName" value="${login.member_id }" readonly></th>
-					<th><button class="btn btn-outline-dark btn-sm float-right" onclick="chatName()" id="startBtn">채팅 시작</button></th>
-				</tr>
-			</table>
-		</div>
-		<div id="yourMsg">
-			<table class="inputTable">
-				<tr>
+					<c:if test="${not empty login }"><input type="hidden" name="userName" id="userName" value="${login.member_id }" readonly></c:if>
+					<c:if test="${not empty managerLogin }"><input type="hidden" name="userName" id="userName" value="${managerLogin.manager_id }" readonly></c:if>
 					
-					<th><input id="chatting" placeholder="보내실 메시지를 입력하세요." ></th>
-					<th><button class="btn btn-warning btn-sm float-right" onclick="send()" id="sendBtn"> 보내기</button></th>
-				</tr>
-			</table>
+					<button class="btn btn-outline-dark btn-lg float-right" onclick="chatName()" id="startBtn">채팅 시작</button>			
+		</div>
+		
+		
+		<div id="yourMsg">
+					<div class="input-group is-invalid">
+      <input type="text" class="form-control" placeholder="보내실 메시지를 입력하세요. " id="chatting" required>
+  
+    <div class="input-group-append">
+       <button class="btn btn-outline-warning" type="button" onclick="send()" id="sendBtn">Send</button>
+    </div>
+  </div>
 		</div>
 	</div>
 </body>
