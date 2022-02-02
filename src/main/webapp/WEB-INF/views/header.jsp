@@ -8,6 +8,15 @@
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+main {
+
+	background-image: url("/resources/img/bg02.jpg");
+	background-repeat : no-repeat;
+        background-size : cover;
+}
+
+
+
 #rolling {
  	margin-bottom: -10px;
  	padding: 5px;
@@ -15,7 +24,7 @@
     color: black;
     outline-color:  white;
     outline-style: outset;
-    background-color: inherit;
+    background-color: white;
     
 }
 
@@ -171,8 +180,8 @@ font-size: 1.1rem;
       </div>
     </nav>
 
-<main style="background-color: white; margin-bottom: -20px;">
-<nav class="navbar   justify-content-center  align-items-center pt-5 " >
+<main>
+<nav class="bg-llink navbar   justify-content-center  align-items-center pt-5 " >
 <ul class="nav ">
 
 <li class="nav-item ">
@@ -180,7 +189,7 @@ font-size: 1.1rem;
   </li>
   </ul>
  </nav>
- </main>
+ 
  <nav class="navbar  bg-link justify-content-end    pr-5" >
   
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -214,7 +223,7 @@ font-size: 1.1rem;
    </form>
   
 </nav>
-
+</main>
 <nav class=" bg-light  d-flex flex-wrap align-items-center justify-content-center  py-1 px-5 shadow-sm">
       
 
