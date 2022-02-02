@@ -40,7 +40,3 @@
 # 동적으로 등록된 아이템 리스트
 ![상품 리스트](https://user-images.githubusercontent.com/96754397/152152300-bccbfef3-0a7d-4243-838a-c9737c9811de.png)
 <hr>
-
-
-
-
