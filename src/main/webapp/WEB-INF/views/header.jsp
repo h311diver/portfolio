@@ -8,6 +8,15 @@
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+main {
+
+	background-image: url("/resources/img/bg02.jpg");
+	background-repeat : no-repeat;
+        background-size : cover;
+}
+
+
+
 #rolling {
  	margin-bottom: -10px;
  	padding: 5px;
@@ -15,7 +24,7 @@
     color: black;
     outline-color:  white;
     outline-style: outset;
-    background-color: inherit;
+    background-color: white;
     
 }
 
@@ -128,10 +137,6 @@ height : 38px;
 * {
 font-size: 1.1rem;
 	 font-family: 'Jua', sans-serif;
-	
-	
-	
-	
 }
 
 
@@ -151,9 +156,9 @@ font-size: 1.1rem;
             <li><a href="/" class="nav-link px-2 link-secondary text-dark"> Home &nbsp;</a></li>
     
             <li><a href="/fnq/list" class="nav-link px-2 link-dark text-dark"> 자주 묻는 질문 &nbsp;</a></li>
-            
-            <li><a onclick="chat()" class="nav-link px-2 link-dark text-dark"> 판매자와 1대1채팅 </a></li>
-    
+            <c:if test="${not empty login || not empty managerLogin}">
+            <li><a href="javascript:void(0)" onclick="chat()" class="nav-link px-2 link-dark text-dark"> 판매자와 1대1채팅 </a></li>
+    		</c:if>
      
       </ul>
 
@@ -175,8 +180,8 @@ font-size: 1.1rem;
       </div>
     </nav>
 
-<main style="background-color: white; margin-bottom: -20px;">
-<nav class="navbar   justify-content-center  align-items-center pt-5 " >
+<main>
+<nav class="bg-llink navbar   justify-content-center  align-items-center pt-5 " >
 <ul class="nav ">
 
 <li class="nav-item ">
@@ -184,7 +189,7 @@ font-size: 1.1rem;
   </li>
   </ul>
  </nav>
- </main>
+ 
  <nav class="navbar  bg-link justify-content-end    pr-5" >
   
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -218,7 +223,7 @@ font-size: 1.1rem;
    </form>
   
 </nav>
-
+</main>
 <nav class=" bg-light  d-flex flex-wrap align-items-center justify-content-center  py-1 px-5 shadow-sm">
       
 
@@ -320,10 +325,10 @@ font-size: 1.1rem;
    });
    
    
-   function chat() {
-	   var url="../../board/reviewinsert/"+board_no;
-       window.open(url,"","width=400,height=500,left=600");
-   }
+  function chat() {
+	  var url="../../chat";
+      window.open(url,"","width=500,height=710,left=600");
+  }
    
    </script>
    <script type="text/javascript">

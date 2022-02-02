@@ -18,6 +18,8 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/resources/js/file.js" type="text/javascript"></script>
 <style>
+
+
 .text-stroke {
  
     text-shadow:
@@ -130,7 +132,7 @@ function classToggle() {
 
 	<jsp:include page="sidebar.jsp" />
 
-	<jsp:include page="popup.jsp" />
+	<jsp:include page="popup.jsp " />
 	
 	<div class="container ">
 <br>
