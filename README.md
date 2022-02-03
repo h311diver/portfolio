@@ -2,7 +2,7 @@
 *만약 서버가 닫혀있다면 연락주세요!
 
 # 웹소켓을 활용한 실시간 채팅기능
-![채팅](https://user-images.githubusercontent.com/96754397/152157380-284b89ec-9d3c-454c-b8d7-c83b419dea31.gif)
+![채팅](https://user-images.githubusercontent.com/96754397/152157339-4a3cd1f4-5148-4f0c-8831-d9e5a2db2837.gif)
 <hr>
 
 # 풀캘린더에 매출을 동적으로 구현
