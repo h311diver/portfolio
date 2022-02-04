@@ -1,5 +1,12 @@
-# helldiver.co.kr(집에 서버 구축 + 개인 도메인)
-*만약 서버가 닫혀있다면 연락주세요!
+# helldiver.co.kr(집에 서버 구축 + 개인 도메인) <br>
+프로그래밍 언어 : JAVA, JSP, Servlet <br>
+웹 표준 : HTML, CSS, JavaScript, jQuery, ajax, Bootstrap <br>
+프레임워크 : SpringFramwork <br>
+DBMS : Oracle <br>
+ORM : MyBatis <br>
+Server : Tomcat <br>
+BuildTool : maven <br>
+형상관리툴 : Git/Github <br>
 
 # 웹소켓을 활용한 실시간 채팅기능
 ![채팅](https://user-images.githubusercontent.com/96754397/152157339-4a3cd1f4-5148-4f0c-8831-d9e5a2db2837.gif)
