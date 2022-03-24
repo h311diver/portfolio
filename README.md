@@ -1,4 +1,4 @@
-# helldiver.co.kr(집에 서버 구축 + 개인 도메인) <br>
+# helldiver.co.kr(서버 구축 + 개인 도메인) <br>
 프로그래밍 언어 : JAVA, JSP, Servlet <br>
 웹 표준 : HTML, CSS, JavaScript, jQuery, ajax, Bootstrap <br>
 프레임워크 : SpringFramwork <br>
