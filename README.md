@@ -5,9 +5,8 @@
 프레임워크 : Spring <br>
 데이터베이스 : Oracle <br>
 ORM : MyBatis <br>
-서버 : Tomcat <br>
 빌드 툴 : maven <br>
-형상관리 툴 : Git/Github <br>
+형상관리 툴 : Github <br>
 
 ## 웹소켓을 활용한 실시간 채팅기능
 ![채팅](https://user-images.githubusercontent.com/96754397/152157339-4a3cd1f4-5148-4f0c-8831-d9e5a2db2837.gif)
