@@ -1,8 +1,8 @@
 # 개발자 교육 과정 중 진행한 프로젝트에서 개인적으로 추가 개발을 진행.
 
 ## 사용 기술 스택 목록
-프로그래밍 언어 : JAVA, JS<br>
-프레임워크 : SpringFramwork <br>
+프로그래밍 언어 : JAVA, JS <br>
+프레임워크 : Spring <br>
 데이터베이스 : Oracle <br>
 ORM : MyBatis <br>
 서버 : Tomcat <br>
