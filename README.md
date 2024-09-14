@@ -4,7 +4,7 @@
 프로그래밍 언어 : JAVA, JS <br>
 프레임워크 : Spring <br>
 데이터베이스 : Oracle <br>
-ORM : MyBatis <br>
+SQL Mapper : MyBatis <br>
 빌드 툴 : maven <br>
 형상관리 툴 : Github <br>
 
